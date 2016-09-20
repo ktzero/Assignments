@@ -29,12 +29,12 @@ public class Mainline {
 		students.get(2).assignMajor(2);
 		students.get(3).assignMajor(5);
 		students.get(4).assignMajor(6);
-		students.get(0).enrollClass();
-		
-		//for(Student stu: students)
-		//{
-			students.get(0).display();
-		//}
+				
+		for(Student stu: students)
+		{
+			stu.enrollClass();
+			stu.display();
+		}
 		
 	}
 }

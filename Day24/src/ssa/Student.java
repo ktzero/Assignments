@@ -137,8 +137,13 @@ public class Student {
 			}
 			
 			//add regular classes (not in major)
-			myStmt = myConn.prepareStatement("SELECT id from class where id not in (" + String.join(",", majorClasses) + ")");
+			//check to see if major exists
+			if(majorID < 0)
+				myStmt = myConn.prepareStatement("select id from class");
+			else
+				myStmt = myConn.prepareStatement("SELECT id from class where id not in (" + String.join(",", majorClasses) + ")");
 			//myStmt.setInt(1, majorID);
+			
 			myRs = myStmt.executeQuery();
 			
 			//count how many classes
@@ -228,6 +233,9 @@ public class Student {
 					tempRs.next();
 					System.out.println(tempRs.getString("subject") + tempRs.getString("section") + " required for major");
 				}
+				
+				if(majorID < 0)
+					System.out.printf("%s is not currently in a major\n", name);
 				for(String id : classNotInMajor)
 				{
 					myStmt = myConn.prepareStatement("select * from class where id=?");
