@@ -1,0 +1,19 @@
+.red {	
+	color: red;
+}
+
+.green {	
+	color: green;
+}
+
+.italics{
+	font-style:italic;
+}
+
+body
+{
+	margin:auto;
+	margin: auto;
+     width: 50%;
+    padding: 10px;
+}
