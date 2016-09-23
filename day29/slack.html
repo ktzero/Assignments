@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Day29 Assignment</title>
+	<link href="css/bootstrap.min.css" rel ="stylesheet">
+	<link rel="stylesheet" type="text/css" href="slack.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<script src="getSlackToken.js"></script>
+	<script src="slack.js"></script>
+  </head>
+  <body>
+	<h1> Slack Messaging Interface </h1>
+    <div>
+      <p> Channels </p>
+	  <p  />
+	  <input type="button" id = "toggle" value="Show private channels"></button>
+	  <form>
+			<li id = "PublicChannels">
+		  
+			</li>
+			<li id = "PrivateChannels">
+				
+			</li>
+	  </form>
+    </div>
+	<div>
+		<p> Post message </p>
+		<textarea id="message" type="text" placeholder="Post message here" rows="10"></textarea>
+		<p></p>
+		<button id="post">Post!</button>
+	</div>
+  </body>
+</html>
