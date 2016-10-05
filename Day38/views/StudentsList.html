@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consuming REST web service in Javascript</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="StudentsList.js"></script>
+</head>
+<body>
+  <table id="list" class="table table-striped">
+  	<tr><th> ID</th>
+  		<th> Full name </th>
+  		<th> SAT </th>
+  		<th> GPA </th>
+  		<th> Edit </th>
+  		<th> Delete </th>
+  </table>
+  <table class="table table-striped">
+  	<tr>
+  			<td> Add Student</td>
+		    <td> First name:<input type="text" id="addFirst"> </td>
+		    <td> Last:<input type="text" id="addLast"> </td>
+		    <td> SAT score:<input type="text" id="addSAT"> </td>
+		    <td> GPA:<input type="text" id="addGPA"> </td>
+		    <td> Add:<input type='image' id ="add"
+		    	src="/pictures/plus_sign.jpg" style='height:25px;width:25px' 
+		    	onClick='window.location.href=window.location.href'/></td>
+		</tr>
+  </table>
+</body>
+</html>
