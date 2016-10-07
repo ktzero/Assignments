@@ -1,0 +1,33 @@
+<div>
+  <table id="list" class="table table-striped">
+  	<tr><th> ID</th>
+  		<th> Full name </th>
+  		<th> SAT </th>
+  		<th> GPA </th>
+  		<th> Edit </th>
+  		<th> Delete </th>
+		<tr ng-repeat="student in ctrl.students">
+			<td ng-bind="student.id"></td>
+			<td> <a ng-href="#/student/{{student.id}}"> {{student.first_name + ' ' + student.last_name}} </a> </td>
+			<td> <input type='text' disabled='disabled' ng-attr-id="sat{{student.id}}" value="{{student.sat}}"></td>
+			<td> <input type='text' disabled='disabled' ng-attr-id="gpa{{student.id}}" value="{{student.gpa}}"></td>
+			<td> <input ng-click="ctrl.edit(student.id)" type='image' value='edit' id = "edit"
+				src='/pictures/edit.png' style='height:25px;width:25px' /> </td>
+		    <td> <input ng-click="ctrl.delete(student.id)" type='image' id = "delete"
+				src='/pictures/delete1600.png' style='height:25px;width:25px' 
+				onClick='window.location.href=window.location.href'/> </td>
+		</tr>
+  </table>
+  <table class="table table-striped">
+  	<tr>
+  			<td> Add Student</td>
+		    <td> First name:<input type="text" id="addFirst"> </td>
+		    <td> Last:<input type="text" id="addLast"> </td>
+		    <td> SAT score:<input type="text" id="addSAT"> </td>
+		    <td> GPA:<input type="text" id="addGPA"> </td>
+		    <td> Add:<input ng-click="ctrl.add()" type='image' id ="add"
+		    	src="/pictures/plus_sign.jpg" style='height:25px;width:25px' 
+		    	onClick='window.location.href=window.location.href'/></td>
+		</tr>
+  </table>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="AppMod">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo Intro to Angular</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<link href="index.css" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js" type="text/javascript"></script>
+
+	<script src="index.js" type="text/javascript"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body ng-controller="AppCtrl as ctrl">
+	<div id="allpage">
+		<div id="header">
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="#/">HOME</a></li>
+				<li><a href="#/student">STUDENT</a></li>
+				<li><a href="#/studentlist">STUDENTLIST</a></li>
+				<li><a href="#/about">ABOUT</a></li>
+				<li>test</li>
+			</ul>
+
+		</div>
+		<div id="leftbarx">
+		</div>
+		<div id="content">
+			<div ng-view></div>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

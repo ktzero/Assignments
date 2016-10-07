@@ -1,0 +1,17 @@
+<div>
+	<h1>Students</h1>
+	<table class="table table-striped">
+		<thead>
+			<tr><td>Name</td><td>SAT</td><td>GPA</td></tr>
+		</thead>
+		<tbody>
+		<button ng-click="ctrl.refresh()">Refresh </button>
+		<tr ng-repeat="student in ctrl.students" ng-show="student.vis">
+			<td ng-bind="student.first_name + ' ' + student.last_name"></td>
+			<td ng-bind="student.sat"></td>
+			<td ng-bind="student.gpa"></td>
+			<td> <button ng-click="ctrl.hide($index)"> Hide </button> </td>
+		</tr>
+		</tbody>
+	</table>
+</div>
